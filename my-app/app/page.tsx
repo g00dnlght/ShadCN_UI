@@ -11,7 +11,6 @@ import * as React from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
-import { useState, useEffect } from 'react';
 
 export default function TabsDemo() {
   const { theme, setTheme } = useTheme();
@@ -43,14 +42,14 @@ export default function TabsDemo() {
             </CardHeader>
           </Card>
         </TabsContent>
-        <TabsContent value="workTab">
+        <TabsContent value="workTab" className="pb-2">
           <Card>
             <CardHeader>
-              <CardContent className="space-y-2">
-                <div className="grid gap-4 text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
+              <CardContent className="">
+                <div className="text-center border rounded-lg">
                   <a
                     href="https://victortonu.myportfolio.com/"
-                    className="px-5 py-4 transition-colors border border-transparent rounded-lg group hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+                    className="px-2 py-4 border rounded-lg"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -66,8 +65,8 @@ export default function TabsDemo() {
                   </a>
 
                   <a
-                    href="https://github.com/g00dnlght"
-                    className="px-5 py-4 transition-colors border border-transparent rounded-lg group hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
+                    href="https://github.com/vtonu"
+                    className="px-5 py-4 transition-colors group"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -90,7 +89,7 @@ export default function TabsDemo() {
           size="icon"
           onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
         >
-          {theme === 'dark' ? (
+          {theme === 'light' ? (
             <Moon className="h-[1.2rem] w-[1.2rem]" />
           ) : (
             <Sun className="h-[1.2rem] w-[1.2rem]" />
