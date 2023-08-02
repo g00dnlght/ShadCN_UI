@@ -25,7 +25,7 @@ export default function TabsDemo() {
 
   React.useEffect(() => {
     setTheme('dark');
-  }, []);
+  }, [setTheme]); // Add 'setTheme' to the dependency array
 
   const toggleTheme = () => {
     if (theme === 'light') {
@@ -52,13 +52,13 @@ export default function TabsDemo() {
               <CardHeader>
                 <CardTitle>About Me</CardTitle>
                 <CardDescription>
-                  Hello! I'm Victor, a creative UI and graphic designer,
+                  Hello! My name is Victor, a creative UI and graphic designer,
                   constantly exploring new horizons. UI design is my forte,
                   complemented by a bit of UX. My fascination with AI
                   technology, computers, and gaming fuels my enthusiasm for
                   innovative designs. <br />
                   <br />I believe that simplicity & aesthetics create impactful
-                  user experiences. When I'm not designing, I immerse myself in
+                  user experiences. When I am not designing, I immerse myself in
                   gaming and reading. Let's team up and bring our creative ideas
                   to life!
                 </CardDescription>
