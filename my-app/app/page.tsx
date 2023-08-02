@@ -58,9 +58,9 @@ export default function TabsDemo() {
                   technology, computers, and gaming fuels my enthusiasm for
                   innovative designs. <br />
                   <br />I believe that simplicity & aesthetics create impactful
-                  user experiences. When I am not designing, I immerse myself in
-                  gaming and reading. Let's team up and bring our creative ideas
-                  to life!
+                  user experiences. When I&apos;m not designing, I immerse
+                  myself in gaming and reading. Let&apos;s team up and bring our
+                  creative ideas to life!
                 </CardDescription>
               </CardHeader>
             </Card>
