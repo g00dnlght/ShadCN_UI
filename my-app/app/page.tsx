@@ -57,10 +57,10 @@ export default function TabsDemo() {
                   complemented by a bit of UX. My fascination with AI
                   technology, computers, and gaming fuels my enthusiasm for
                   innovative designs. <br />
-                  <br />I believe that simplicity & aesthetics create impactful
-                  user experiences. When I&apos;m not designing, I immerse
-                  myself in gaming and reading. Let&apos;s team up and bring our
-                  creative ideas to life!
+                  <br />I believe that simplicity &amp; aesthetics create
+                  impactful user experiences. When I&apos;m not designing, I
+                  immerse myself in gaming and reading. Let&apos;s team up and
+                  bring our creative ideas to life!
                 </CardDescription>
               </CardHeader>
             </Card>
