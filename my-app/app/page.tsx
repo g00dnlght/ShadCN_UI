@@ -52,15 +52,11 @@ export default function TabsDemo() {
               <CardHeader>
                 <CardTitle>About Me</CardTitle>
                 <CardDescription>
-                  Hello! My name is Victor, a creative UI and graphic designer,
+                  I&apos;m Victor, a creative UI &amp; graphic designer
                   constantly exploring new horizons. UI design is my forte,
                   complemented by a bit of UX. My fascination with AI
-                  technology, computers, and gaming fuels my enthusiasm for
-                  innovative designs. <br />
-                  <br />I believe that simplicity &amp; aesthetics create
-                  impactful user experiences. When I&apos;m not designing, I
-                  immerse myself in gaming and reading. Let&apos;s team up and
-                  bring our creative ideas to life!
+                  technology, computers &amp; gaming fuels my enthusiasm for
+                  innovative work.
                 </CardDescription>
               </CardHeader>
             </Card>
