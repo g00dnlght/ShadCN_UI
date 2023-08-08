@@ -50,7 +50,9 @@ export default function TabsDemo() {
           <TabsContent value="aboutTab" className="pb-2">
             <Card>
               <CardHeader>
-                <CardTitle>About Me</CardTitle>
+                <Button size="sm">
+                  <CardTitle>ABOUT ME</CardTitle>
+                </Button>
                 <CardDescription>
                   I&apos;m Victor, a creative UI &amp; graphic designer
                   constantly exploring new horizons. UI design is my forte,
@@ -65,10 +67,10 @@ export default function TabsDemo() {
             <Card>
               <CardHeader>
                 <CardContent>
-                  <div className="px-2 py-2 text-center border rounded-lg">
+                  <div className="px-2 py-2 text-center">
                     <a
                       href="https://victortonu.myportfolio.com/"
-                      className="transition-colors group"
+                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg pb group ring-zinc-100/5 ring-zinc-800 hover:bg-zinc-100/5 hover:ring-zinc-600"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -85,7 +87,7 @@ export default function TabsDemo() {
 
                     <a
                       href="https://github.com/vtonu"
-                      className="transition-colors group"
+                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg pb group ring-zinc-100/5 ring-zinc-800 hover:bg-zinc-100/5 hover:ring-zinc-600"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
