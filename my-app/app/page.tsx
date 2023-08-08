@@ -63,11 +63,11 @@ export default function TabsDemo() {
               </CardHeader>
             </Card>
           </TabsContent>
-          <TabsContent value="workTab" className="pb-2 ">
+          <TabsContent value="workTab" className="pb-2">
             <Card>
-              <CardHeader>
+              <CardHeader className="mt-4">
                 <CardContent>
-                  <div className="px-2 py-2 text-center">
+                  <div className="text-center ">
                     <a
                       href="https://victortonu.myportfolio.com/"
                       className="block p-2 mx-4 mb-2 transition-colors border rounded-lg pb group ring-zinc-100/5 ring-zinc-800 hover:bg-zinc-100/5 hover:ring-zinc-600"
@@ -81,7 +81,7 @@ export default function TabsDemo() {
                         </span>
                       </h2>
                       <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>
-                        Graphic Design Portfolio
+                        Graphic Design Portfolio.
                       </p>
                     </a>
 
@@ -98,7 +98,24 @@ export default function TabsDemo() {
                         </span>
                       </h2>
                       <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>
-                        GitHub Profile
+                        GitHub Profile.
+                      </p>
+                    </a>
+
+                    <a
+                      href="https://github.com/vtonu"
+                      className="block p-2 mx-4 transition-colors border rounded-lg pb group ring-zinc-100/5 ring-zinc-800 hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <h2 className={`mb-4 text-xl font-semibold my-8`}>
+                        Project 3{' '}
+                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                          -&gt;
+                        </span>
+                      </h2>
+                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>
+                        Intro to Maya.
                       </p>
                     </a>
                   </div>
