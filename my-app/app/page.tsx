@@ -54,11 +54,10 @@ export default function TabsDemo() {
                   <CardTitle>ABOUT ME</CardTitle>
                 </Button>
                 <CardDescription>
-                  I&apos;m Victor, a creative UI &amp; graphic designer
-                  constantly exploring new horizons. UI design is my forte,
-                  complemented by a bit of UX. My fascination with AI
-                  technology, computers &amp; gaming fuels my enthusiasm for
-                  innovative work.
+                  I&apos;m Victor, a creative UI designer constantly exploring
+                  new horizons. Graphic Design is my forte, complemented by a
+                  bit of UX. My fascination with AI technology, computers &amp;
+                  gaming fuels my enthusiasm for innovative work.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -70,7 +69,7 @@ export default function TabsDemo() {
                   <div className="text-center ">
                     <a
                       href="https://victortonu.myportfolio.com/"
-                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg pb group ring-zinc-100/5 ring-zinc-800 hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -87,7 +86,7 @@ export default function TabsDemo() {
 
                     <a
                       href="https://github.com/vtonu"
-                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg pb group ring-zinc-100/5 ring-zinc-800 hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -104,7 +103,7 @@ export default function TabsDemo() {
 
                     <a
                       href="https://github.com/vtonu"
-                      className="block p-2 mx-4 transition-colors border rounded-lg pb group ring-zinc-100/5 ring-zinc-800 hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
