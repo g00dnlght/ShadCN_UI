@@ -86,7 +86,7 @@ export default function TabsDemo() {
                     </a>
 
                     <a
-                      href="https://github.com/vtonu"
+                      href="https://github.com/vtonu/Nuxt_UI"
                       className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
                       target="_blank"
                       rel="noopener noreferrer">
