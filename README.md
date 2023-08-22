@@ -1,6 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+My Portfolio
 
-![image](https://github.com/vtonu/ShadCN_UI/assets/56773210/708dc6f3-af7d-4033-9082-bc90a42e87f9)
+![image](https://github.com/vtonu/ShadCN_UI/assets/56773210/08dcf2cc-1983-4678-b5ed-39730ba3cfb6)
 
 ## Getting Started
 
