@@ -6,6 +6,7 @@ import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 import dynamic from 'next/dynamic';
+import { FaceIcon, GitHubLogoIcon, ImageIcon, SunIcon } from '@radix-ui/react-icons';
 
 const NoSSRThemeProvider = dynamic(() => import('next-themes').then((mod) => mod.ThemeProvider), {
   ssr: false,
@@ -29,7 +30,7 @@ export default function TabsDemo() {
   return (
     <NoSSRThemeProvider>
       <main className="flex items-center justify-center min-h-screen">
-        <Tabs defaultValue="aboutTab" className="w-[400px]">
+        <Tabs defaultValue="aboutTab" className="w-[390px]">
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="aboutTab" className="rounded-lg">
               ABOUT ME
@@ -121,13 +122,20 @@ export default function TabsDemo() {
               </CardHeader>
             </Card>
           </TabsContent>
-          <Button size="icon" onClick={toggleTheme}>
-            {theme === 'light' ? (
-              <Moon className="h-[1.2rem] w-[1.2rem]" />
-            ) : (
-              <Sun className="h-[1.2rem] w-[1.2rem]" />
-            )}
-          </Button>
+          <div className="flex">
+            <Button size="icon" onClick={toggleTheme}>
+              {theme === 'light' ? (
+                <Moon className="h-[1.2rem] w-[1.2rem]" />
+              ) : (
+                <Sun className="h-[1.2rem] w-[1.2rem]" />
+              )}
+            </Button>
+            <Button size="icon" className="ml-2">
+              <a href="https://github.com/vtonu">
+                <GitHubLogoIcon />
+              </a>
+            </Button>
+          </div>
         </Tabs>
       </main>
     </NoSSRThemeProvider>
