@@ -46,7 +46,7 @@ export default function TabsDemo() {
                   <CardTitle>ABOUT ME</CardTitle>
                 </Button> */}
                 <CardDescription>
-                  I&apos;m Victor, a creative UI designer constantly exploring new horizons. Graphic
+                  I&apos;m Victor, a creative individual constantly exploring new horizons. Graphic
                   Design is my forte, complemented by a bit of UX. My fascination with AI
                   technology, computers, music &amp; gaming fuels my enthusiasm for innovative work.
                 </CardDescription>
@@ -115,12 +115,26 @@ export default function TabsDemo() {
                         3D Materials & Textures.
                       </p>
                     </a>
+
+                    <a
+                      href="https://vtonu.itch.io/"
+                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      <h2 className={`mb-4 text-xl font-semibold my-8`}>
+                        Project 4{' '}
+                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                          -&gt;
+                        </span>
+                      </h2>
+                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>itch.io Profile</p>
+                    </a>
                   </div>
                 </CardContent>
               </CardHeader>
             </Card>
           </TabsContent>
-          <div className="flex">
+          <div className="flex justify-center">
             <Button size="icon" onClick={toggleTheme}>
               {theme === 'light' ? (
                 <Moon className="h-[1.2rem] w-[1.2rem]" />
@@ -128,11 +142,11 @@ export default function TabsDemo() {
                 <Sun className="h-[1.2rem] w-[1.2rem]" />
               )}
             </Button>
-            <Button size="icon" className="ml-2">
-              <a href="https://github.com/vtonu">
+            <a href="https://github.com/vtonu">
+              <Button size="icon" className="ml-2">
                 <GitHubLogoIcon />
-              </a>
-            </Button>
+              </Button>
+            </a>
           </div>
         </Tabs>
       </main>
