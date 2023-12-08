@@ -58,8 +58,7 @@ export default function TabsDemo() {
               <CardHeader className="mt-4">
                 <CardContent>
                   <div className="text-center ">
-                    /*{' '}
-                    <a
+                    {/*  <a
                       href="https://github.com/vtonu"
                       className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
                       target="_blank"
@@ -71,8 +70,8 @@ export default function TabsDemo() {
                         </span>
                       </h2>
                       <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>GitHub Profile</p>
-                    </a>{' '}
-                    */
+                    </a> */}
+
                     <a
                       href="https://victortonu.myportfolio.com/"
                       className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
