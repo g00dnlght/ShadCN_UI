@@ -7,6 +7,7 @@ import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 import dynamic from 'next/dynamic';
 import { FaceIcon, GitHubLogoIcon, ImageIcon, SunIcon } from '@radix-ui/react-icons';
+import { Separator } from '@/components/ui/separator';
 
 const NoSSRThemeProvider = dynamic(() => import('next-themes').then((mod) => mod.ThemeProvider), {
   ssr: false,
@@ -31,6 +32,12 @@ export default function TabsDemo() {
     <NoSSRThemeProvider>
       <main className="flex items-center justify-center min-h-screen">
         <Tabs defaultValue="aboutTab" className="w-[390px]">
+          <TabsContent value="aboutTab" className="flex justify-center pb-8">
+            <h4>
+              <h5 className="pb-2 text-sm font-medium leading-none ">Welcome!</h5>
+              <Separator />
+            </h4>
+          </TabsContent>
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="aboutTab" className="rounded-lg">
               ABOUT ME
@@ -83,9 +90,7 @@ export default function TabsDemo() {
                           -&gt;
                         </span>
                       </h2>
-                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>
-                        Graphic Design Portfolio
-                      </p>
+                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>Adobe Portfolio</p>
                     </a>
                     <a
                       href="https://nuxt-ui-maya.vercel.app/"
@@ -128,6 +133,22 @@ export default function TabsDemo() {
                         </span>
                       </h2>
                       <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>itch.io Profile</p>
+                    </a>
+
+                    <a
+                      href="https://github.com/vtonu/GraphicDesign_Portfolio"
+                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      <h2 className={`mb-4 text-xl font-semibold my-8`}>
+                        Project 5{' '}
+                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
+                          -&gt;
+                        </span>
+                      </h2>
+                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>
+                        Graphic Design Portfolio
+                      </p>
                     </a>
                   </div>
                 </CardContent>
