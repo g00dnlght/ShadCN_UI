@@ -32,11 +32,18 @@ export default function TabsDemo() {
     <NoSSRThemeProvider>
       <main className="flex items-center justify-center min-h-screen">
         <Tabs defaultValue="aboutTab" className="w-[390px]">
-          <TabsContent value="aboutTab" className="flex justify-center pb-8">
-            <h4>
-              <h5 className="pb-2 text-sm font-medium leading-none ">Welcome!</h5>
-              <Separator />
-            </h4>
+          <TabsContent value="aboutTab" className="flex flex-col pb-8">
+            <div className="flex flex-col items-center space-y-4">
+              <div>
+                <h1 className="pb-2 text-2xl font-medium leading-none">Welcome!</h1>
+                <Separator />
+              </div>
+              <div>
+                <h1 className="pb-2 text-xs font-medium leading-none ">
+                  Powered by React, NextJS, Radix & TailwindCSS
+                </h1>
+              </div>
+            </div>
           </TabsContent>
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="aboutTab" className="rounded-lg">
