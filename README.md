@@ -1,3 +1,2 @@
 A ShadCN Project using React, NextJS, Radix & TailwindCSS - Portfolio
-
-![image](https://github.com/vtonu/ShadCN_UI/assets/56773210/809421cf-ba4c-46c9-b28e-f719f5cc6ec1)
+![image](https://github.com/vtonu/ShadCN_UI/assets/56773210/7356fa7a-bfb5-4bd5-bf68-f2a3d4734ebe)
