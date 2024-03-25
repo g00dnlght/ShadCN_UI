@@ -61,7 +61,7 @@ export default function TabsDemo() {
                 </Button> */}
                 <CardDescription>
                   I&apos;m Victor, a creative individual constantly exploring new horizons. Graphic
-                  Design is my forte, complemented by a bit of UX. My fascination with AI
+                  Design is my forte, complemented by a bit of UI/UX. My fascination with AI
                   technology, computers, music &amp; gaming fuels my enthusiasm for innovative work.
                 </CardDescription>
               </CardHeader>
@@ -69,9 +69,9 @@ export default function TabsDemo() {
           </TabsContent>
           <TabsContent value="workTab" className="pb-2">
             <Card>
-              <CardHeader className="mt-4">
+              <CardHeader className="mt-2">
                 <CardContent>
-                  <div className="text-center ">
+                  <div className="text-center">
                     {/*  <a
                       href="https://github.com/vtonu"
                       className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
@@ -87,8 +87,8 @@ export default function TabsDemo() {
                     </a> */}
 
                     <a
-                      href="https://victortonu.myportfolio.com/"
-                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      href="https://game138-aceternity-ui.vercel.app/"
+                      className="block p-2 mx-4 mb-4 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
                       target="_blank"
                       rel="noopener noreferrer">
                       <h2 className={`mb-4 text-xl font-semibold my-8`}>
@@ -97,11 +97,11 @@ export default function TabsDemo() {
                           -&gt;
                         </span>
                       </h2>
-                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>Adobe Portfolio</p>
+                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>GAME138</p>
                     </a>
                     <a
                       href="https://nuxt-ui-maya.vercel.app/"
-                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      className="block p-2 mx-4 mb-4 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
                       target="_blank"
                       rel="noopener noreferrer">
                       <h2 className={`mb-4 text-xl font-semibold my-8`}>
@@ -110,11 +110,11 @@ export default function TabsDemo() {
                           -&gt;
                         </span>
                       </h2>
-                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>Intro to Maya.</p>
+                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>Intro to Maya</p>
                     </a>
                     <a
                       href="https://nuxt-ui-3-d.vercel.app/"
-                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      className="block p-2 mx-4 mb-4 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
                       target="_blank"
                       rel="noopener noreferrer">
                       <h2 className={`mb-4 text-xl font-semibold my-8`}>
@@ -124,12 +124,12 @@ export default function TabsDemo() {
                         </span>
                       </h2>
                       <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>
-                        3D Materials & Textures.
+                        3D Materials & Textures
                       </p>
                     </a>
 
                     <a
-                      href="https://vtonu.itch.io/"
+                      href="https://github.com/vtonu/GraphicDesign_Portfolio"
                       className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
                       target="_blank"
                       rel="noopener noreferrer">
@@ -139,22 +139,8 @@ export default function TabsDemo() {
                           -&gt;
                         </span>
                       </h2>
-                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>itch.io Profile</p>
-                    </a>
-
-                    <a
-                      href="https://github.com/vtonu/GraphicDesign_Portfolio"
-                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      <h2 className={`mb-4 text-xl font-semibold my-8`}>
-                        Project 5{' '}
-                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                          -&gt;
-                        </span>
-                      </h2>
                       <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>
-                        Graphic Design Portfolio
+                        Minimal Graphic Design Portfolio
                       </p>
                     </a>
                   </div>
@@ -173,6 +159,16 @@ export default function TabsDemo() {
             <a href="https://github.com/vtonu">
               <Button size="icon" className="ml-2">
                 <GitHubLogoIcon />
+              </Button>
+            </a>
+            <a href="https://victortonu.myportfolio.com/home">
+              <Button size="icon" className="ml-2">
+                <img src="./adobe.png" alt="Adobe Portfolio" />
+              </Button>
+            </a>
+            <a href="https://vtonu.itch.io/">
+              <Button size="icon" className="ml-2">
+                <img src="./itch.svg" alt="Itch.io Profile" />
               </Button>
             </a>
           </div>
