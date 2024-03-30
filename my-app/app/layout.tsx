@@ -6,8 +6,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
-  description: 'My portfolio.',
+  title: 'Victor Tonu Portfolio',
+  description: 'My Graphic Design portfolio.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

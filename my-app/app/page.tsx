@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import dynamic from 'next/dynamic';
 import { FaceIcon, GitHubLogoIcon, ImageIcon, SunIcon } from '@radix-ui/react-icons';
 import { Separator } from '@/components/ui/separator';
+import { Badge } from '@/components/ui/badge';
 
 const NoSSRThemeProvider = dynamic(() => import('next-themes').then((mod) => mod.ThemeProvider), {
   ssr: false,
@@ -33,7 +34,7 @@ export default function TabsDemo() {
       <main className="flex items-center justify-center min-h-screen">
         <Tabs defaultValue="aboutTab" className="w-[390px]">
           <TabsContent value="aboutTab" className="flex flex-col pb-8">
-            <div className="flex flex-col items-center space-y-4">
+            <div className="flex flex-col items-center space-y-8">
               <div>
                 <h1 className="pb-2 text-2xl font-medium leading-none">Welcome!</h1>
                 <Separator />
@@ -42,6 +43,14 @@ export default function TabsDemo() {
                 <h1 className="pb-2 text-xs font-medium leading-none ">
                   Powered by React, NextJS, Radix & TailwindCSS
                 </h1>
+                <div className="flex justify-center space-x-2">
+                  <Badge variant="outline" className="bg-red-600">
+                    <a href="https://victortonu.myportfolio.com/home">Adobe Portfolio</a>
+                  </Badge>
+                  <Badge variant="outline" className="bg-red-500">
+                    <a href="https://vtonu.itch.io/">Itch.io Profile</a>
+                  </Badge>
+                </div>
               </div>
             </div>
           </TabsContent>
@@ -161,7 +170,7 @@ export default function TabsDemo() {
                 <GitHubLogoIcon />
               </Button>
             </a>
-            <a href="https://victortonu.myportfolio.com/home">
+            {/* <a href="https://victortonu.myportfolio.com/home">
               <Button size="icon" className="ml-2">
                 <img src="./adobe.png" alt="Adobe Portfolio" />
               </Button>
@@ -170,7 +179,7 @@ export default function TabsDemo() {
               <Button size="icon" className="ml-2">
                 <img src="./itch.svg" alt="Itch.io Profile" />
               </Button>
-            </a>
+            </a> */}
           </div>
         </Tabs>
       </main>
