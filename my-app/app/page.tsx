@@ -9,6 +9,8 @@ import dynamic from 'next/dynamic';
 import { FaceIcon, GitHubLogoIcon, ImageIcon, SunIcon } from '@radix-ui/react-icons';
 import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
+import Image from 'next/image';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const NoSSRThemeProvider = dynamic(() => import('next-themes').then((mod) => mod.ThemeProvider), {
   ssr: false,
@@ -36,9 +38,19 @@ export default function TabsDemo() {
           <TabsContent value="aboutTab" className="flex flex-col pb-8">
             <div className="flex flex-col items-center space-y-8">
               <div>
-                <h1 className="pb-2 text-2xl font-medium leading-none">Welcome!</h1>
+                <h1 className="relative z-10 font-sans text-lg font-bold text-center text-transparent md:text-7xl bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-600">
+                  Welcome!
+                </h1>
                 <Separator />
               </div>
+              <AspectRatio ratio={16 / 8} className="bg-muted">
+                <Image
+                  src="/3d.jpg"
+                  alt="Photo by Philip Oroni"
+                  fill
+                  className="object-cover pb-4 rounded-md"
+                />
+              </AspectRatio>
               <div>
                 <h1 className="pb-2 text-xs font-medium leading-none ">
                   Powered by React, NextJS, Radix & TailwindCSS
@@ -54,6 +66,7 @@ export default function TabsDemo() {
               </div>
             </div>
           </TabsContent>
+
           <TabsList className="grid w-full grid-cols-2">
             <TabsTrigger value="aboutTab" className="rounded-lg">
               ABOUT ME
@@ -106,7 +119,7 @@ export default function TabsDemo() {
                           -&gt;
                         </span>
                       </h2>
-                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>GAME138</p>
+                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>Aceternity UI</p>
                     </a>
                     <a
                       href="https://nuxt-ui-maya.vercel.app/"
@@ -148,9 +161,7 @@ export default function TabsDemo() {
                           -&gt;
                         </span>
                       </h2>
-                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>
-                        Minimal Graphic Design Portfolio
-                      </p>
+                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>Mantine UI Portfolio</p>
                     </a>
                   </div>
                 </CardContent>
