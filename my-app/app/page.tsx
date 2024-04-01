@@ -38,7 +38,7 @@ export default function TabsDemo() {
           <TabsContent value="aboutTab" className="flex flex-col pb-8">
             <div className="flex flex-col items-center space-y-8">
               <div>
-                <h1 className="relative z-10 font-sans text-lg font-bold text-center text-transparent md:text-7xl bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-600">
+                <h1 className="relative z-10 pb-4 font-sans text-lg font-bold text-center text-transparent md:text-7xl bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-600">
                   Welcome!
                 </h1>
                 <Separator />
@@ -53,7 +53,7 @@ export default function TabsDemo() {
               </AspectRatio>
               <div>
                 <h1 className="pb-2 text-xs font-medium leading-none ">
-                  Powered by React, NextJS, Radix & TailwindCSS
+                  Powered by Vercel, React, NextJS, Radix & TailwindCSS
                 </h1>
                 <div className="flex justify-center space-x-2">
                   <Badge variant="outline" className="bg-red-600">
