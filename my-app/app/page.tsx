@@ -122,7 +122,9 @@ export default function TabsDemo() {
                           -&gt;
                         </span>
                       </h2>
-                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>Aceternity UI</p>
+                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>
+                        Intro to Environmental Art
+                      </p>
                     </a>
                     <a
                       href="https://nuxt-ui-maya.vercel.app/"
