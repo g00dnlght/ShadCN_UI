@@ -36,7 +36,7 @@ export default function TabsDemo() {
       <main className="flex items-center justify-center min-h-screen">
         <Tabs defaultValue="aboutTab" className="w-[390px]">
           <TabsContent value="aboutTab" className="flex flex-col pb-8">
-            <div className="flex flex-col items-center space-y-8">
+            <div className="flex flex-col items-center space-y-4">
               <div>
                 <h1 className="relative z-10 pb-4 font-sans text-lg font-bold text-center text-transparent md:text-7xl bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-600">
                   Welcome!
@@ -51,18 +51,19 @@ export default function TabsDemo() {
                   className="object-cover pb-4 rounded-md"
                 />
               </AspectRatio>
-              <div>
-                <h1 className="pb-2 text-xs font-medium leading-none ">
-                  Powered by Vercel, React, NextJS, Radix & TailwindCSS
-                </h1>
-                <div className="flex justify-center space-x-2">
-                  <Badge variant="outline" className="bg-red-600">
-                    <a href="https://victortonu.myportfolio.com/home">Adobe Portfolio</a>
-                  </Badge>
-                  <Badge variant="outline" className="bg-red-500">
-                    <a href="https://vtonu.itch.io/">Itch.io Profile</a>
-                  </Badge>
-                </div>
+              <div className="flex justify-center gap-2">
+                <Button size="icon" onClick={toggleTheme}>
+                  {theme === 'light' ? (
+                    <Moon className="h-[1.2rem] w-[1.2rem]" />
+                  ) : (
+                    <Sun className="h-[1.2rem] w-[1.2rem]" />
+                  )}
+                </Button>
+                <a href="https://github.com/vtonu">
+                  <Button size="icon">
+                    <GitHubLogoIcon />
+                  </Button>
+                </a>
               </div>
             </div>
           </TabsContent>
@@ -75,6 +76,7 @@ export default function TabsDemo() {
               WORK
             </TabsTrigger>
           </TabsList>
+
           <TabsContent value="aboutTab" className="pb-2">
             <Card>
               <CardHeader>
@@ -89,6 +91,7 @@ export default function TabsDemo() {
               </CardHeader>
             </Card>
           </TabsContent>
+
           <TabsContent value="workTab" className="pb-2">
             <Card>
               <CardHeader className="mt-2">
@@ -168,29 +171,17 @@ export default function TabsDemo() {
               </CardHeader>
             </Card>
           </TabsContent>
-          <div className="flex justify-center">
-            <Button size="icon" onClick={toggleTheme}>
-              {theme === 'light' ? (
-                <Moon className="h-[1.2rem] w-[1.2rem]" />
-              ) : (
-                <Sun className="h-[1.2rem] w-[1.2rem]" />
-              )}
-            </Button>
-            <a href="https://github.com/vtonu">
-              <Button size="icon" className="ml-2">
-                <GitHubLogoIcon />
-              </Button>
-            </a>
-            {/* <a href="https://victortonu.myportfolio.com/home">
-              <Button size="icon" className="ml-2">
-                <img src="./adobe.png" alt="Adobe Portfolio" />
-              </Button>
-            </a>
-            <a href="https://vtonu.itch.io/">
-              <Button size="icon" className="ml-2">
-                <img src="./itch.svg" alt="Itch.io Profile" />
-              </Button>
-            </a> */}
+          <div className="flex flex-col items-center pt-4">
+            <div>
+              <h1 className="pb-2 text-xs font-medium leading-none ">
+                Powered by Vercel, React, NextJS, Radix UI & TailwindCSS
+              </h1>
+              <div className="flex justify-center ">
+                <Badge variant="outline" className="bg-red-600">
+                  <a href="https://victortonu.myportfolio.com/home">Adobe Portfolio</a>
+                </Badge>
+              </div>
+            </div>
           </div>
         </Tabs>
       </main>
