@@ -6,8 +6,8 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Victor Tonu Portfolio',
-  description: 'My Graphic Design portfolio.',
+  title: 'Portfolio',
+  description: 'My Web Design UI portfolio using Vercel, React, NextJS, Radix UI & TailwindCSS.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

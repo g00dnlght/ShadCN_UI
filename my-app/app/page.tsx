@@ -33,25 +33,35 @@ export default function TabsDemo() {
 
   return (
     <NoSSRThemeProvider>
-      <main className="flex items-center justify-center min-h-screen">
-        <Tabs defaultValue="aboutTab" className="w-[390px]">
-          <TabsContent value="aboutTab" className="flex flex-col pb-8">
-            <div className="flex flex-col items-center space-y-4">
-              <div>
-                <h1 className="relative z-10 pb-4 font-sans text-lg font-bold text-center text-transparent md:text-7xl bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-600">
-                  Welcome!
-                </h1>
-                <Separator />
-              </div>
-              <AspectRatio ratio={16 / 8} className="bg-muted">
-                <Image
-                  src="/3d.jpg"
-                  alt="Photo by Philip Oroni"
-                  fill
-                  className="object-cover pb-4 rounded-md"
-                />
-              </AspectRatio>
-              <div className="flex justify-center gap-2">
+      <main className="flex justify-center min-h-screen">
+        <Tabs defaultValue="homeTab" className="w-[490px] p-5">
+          <TabsList className="w-full">
+            <Separator />
+            <TabsTrigger value="homeTab" className="rounded-lg">
+              HOME
+            </TabsTrigger>
+            <TabsTrigger value="aboutTab" className="rounded-lg">
+              ABOUT
+            </TabsTrigger>
+            <TabsTrigger value="workTab" className="rounded-lg">
+              WORK
+              <Badge variant="outline" className="ml-2 bg-red-500">
+                <a href="https://victortonu.myportfolio.com/home">Adobe Portfolio</a>
+              </Badge>
+            </TabsTrigger>
+            <Separator />
+          </TabsList>
+          <TabsContent value="homeTab" className="">
+            <div>
+              <h1 className="relative z-10 pt-20 pb-20 font-sans text-lg font-bold text-center text-transparent md:text-7xl bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-600">
+                Welcome!
+              </h1>
+            </div>
+            <AspectRatio ratio={16 / 9} className=" bg-muted">
+              <Image src="/3d.jpg" alt="Photo by Philip Oroni" fill className="pb-2 rounded-md" />
+            </AspectRatio>
+            <div className="fixed inset-x-0 flex flex-col items-center gap-2 bottom-5">
+              <div className="flex justify-center gap-2 pt-2">
                 <Button size="icon" onClick={toggleTheme}>
                   {theme === 'light' ? (
                     <Moon className="h-[1.2rem] w-[1.2rem]" />
@@ -65,25 +75,18 @@ export default function TabsDemo() {
                   </Button>
                 </a>
               </div>
+              <Separator />
+              <div>
+                <h1 className="pb-2 text-xs font-medium leading-none ">
+                  Powered by Vercel, React, NextJS, Radix UI & TailwindCSS
+                </h1>
+              </div>
             </div>
           </TabsContent>
-
-          <TabsList className="grid w-full grid-cols-2">
-            <TabsTrigger value="aboutTab" className="rounded-lg">
-              ABOUT ME
-            </TabsTrigger>
-            <TabsTrigger value="workTab" className="rounded-lg">
-              WORK
-            </TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="aboutTab" className="pb-2">
+          <TabsContent value="aboutTab" className="pt-2 pb-8">
             <Card>
               <CardHeader>
-                {/* <Button size="sm">
-                  <CardTitle>ABOUT ME</CardTitle>
-                </Button> */}
-                <CardDescription>
+                <CardDescription className="flex items-center justify-center text-center">
                   I&apos;m Victor, a creative individual constantly exploring new horizons. Graphic
                   Design is my forte, complemented by a bit of UI/UX. My fascination with AI
                   technology, computers, music &amp; gaming fuels my enthusiasm for innovative work.
@@ -94,97 +97,22 @@ export default function TabsDemo() {
 
           <TabsContent value="workTab" className="pb-2">
             <Card>
-              <CardHeader className="mt-2">
+              <CardHeader className="mt-0">
                 <CardContent>
                   <div className="text-center">
-                    {/*  <a
-                      href="https://github.com/vtonu"
-                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      <h2 className={`mb-4 text-xl font-semibold my-8`}>
-                        Project 1{' '}
-                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                          -&gt;
-                        </span>
-                      </h2>
-                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>GitHub Profile</p>
-                    </a> */}
-
-                    <a
-                      href="https://game138-aceternity-ui.vercel.app/"
-                      className="block p-2 mx-4 mb-4 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      <h2 className={`mb-4 text-xl font-semibold my-8`}>
-                        Project 1{' '}
-                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                          -&gt;
-                        </span>
-                      </h2>
-                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>
-                        Intro to Environmental Art
-                      </p>
-                    </a>
-                    <a
-                      href="https://nuxt-ui-maya.vercel.app/"
-                      className="block p-2 mx-4 mb-4 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      <h2 className={`mb-4 text-xl font-semibold my-8`}>
-                        Project 2{' '}
-                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                          -&gt;
-                        </span>
-                      </h2>
-                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>Intro to Maya</p>
-                    </a>
-                    <a
-                      href="https://nuxt-ui-3-d.vercel.app/"
-                      className="block p-2 mx-4 mb-4 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      <h2 className={`mb-4 text-xl font-semibold my-8`}>
-                        Project 3{' '}
-                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                          -&gt;
-                        </span>
-                      </h2>
-                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>
-                        3D Materials & Textures
-                      </p>
-                    </a>
-
                     <a
                       href="https://github.com/vtonu/GraphicDesign_Portfolio"
                       className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
                       target="_blank"
                       rel="noopener noreferrer">
-                      <h2 className={`mb-4 text-xl font-semibold my-8`}>
-                        Project 4{' '}
-                        <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-                          -&gt;
-                        </span>
-                      </h2>
-                      <p className={`m-4 max-w-[50ch] text-sm opacity-50`}>Mantine UI Portfolio</p>
+                      <h2 className={`text-xl font-semibold my-8`}>Project 1</h2>
+                      <p className={` max-w-[50ch] text-sm opacity-50`}>Mantine UI Portfolio</p>
                     </a>
                   </div>
                 </CardContent>
               </CardHeader>
             </Card>
           </TabsContent>
-          <div className="flex flex-col items-center pt-4">
-            <div>
-              <h1 className="pb-2 text-xs font-medium leading-none ">
-                Powered by Vercel, React, NextJS, Radix UI & TailwindCSS
-              </h1>
-              <div className="flex justify-center ">
-                <Badge variant="outline" className="bg-red-600">
-                  <a href="https://victortonu.myportfolio.com/home">Adobe Portfolio</a>
-                </Badge>
-              </div>
-            </div>
-          </div>
         </Tabs>
       </main>
     </NoSSRThemeProvider>
