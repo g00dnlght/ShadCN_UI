@@ -36,7 +36,7 @@ export default function TabsDemo() {
       <main className="flex justify-center min-h-screen">
         <Tabs defaultValue="homeTab" className="w-[490px] p-5">
           <TabsList className="w-full">
-            <Separator />
+            {/* <Separator /> */}
             <TabsTrigger value="homeTab" className="rounded-lg">
               HOME
             </TabsTrigger>
@@ -49,9 +49,11 @@ export default function TabsDemo() {
                 <a href="https://victortonu.myportfolio.com/home">Adobe Portfolio</a>
               </Badge>
             </TabsTrigger>
-            <Separator />
+            {/* <Separator /> */}
           </TabsList>
-          <TabsContent value="homeTab" className="">
+
+          <TabsContent value="homeTab" className="pt-2">
+            <Separator />
             <div>
               <h1 className="relative z-10 pt-20 pb-20 font-sans text-lg font-bold text-center text-transparent md:text-7xl bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-600">
                 Welcome!
@@ -83,8 +85,8 @@ export default function TabsDemo() {
               </div>
             </div>
           </TabsContent>
-          <TabsContent value="aboutTab" className="pt-2 pb-8">
-            <Card>
+          <TabsContent value="aboutTab" className="pt-2">
+            <Card className="pt-2">
               <CardHeader>
                 <CardDescription className="flex items-center justify-center text-center">
                   I&apos;m Victor, a creative individual constantly exploring new horizons. Graphic
@@ -93,11 +95,33 @@ export default function TabsDemo() {
                 </CardDescription>
               </CardHeader>
             </Card>
+            <div className="fixed inset-x-0 flex flex-col items-center gap-2 bottom-5">
+              <div className="flex justify-center gap-2 pt-2">
+                <Button size="icon" onClick={toggleTheme}>
+                  {theme === 'light' ? (
+                    <Moon className="h-[1.2rem] w-[1.2rem]" />
+                  ) : (
+                    <Sun className="h-[1.2rem] w-[1.2rem]" />
+                  )}
+                </Button>
+                <a href="https://github.com/vtonu">
+                  <Button size="icon">
+                    <GitHubLogoIcon />
+                  </Button>
+                </a>
+              </div>
+              <Separator />
+              <div>
+                <h1 className="pb-2 text-xs font-medium leading-none ">
+                  Powered by Vercel, React, NextJS, Radix UI & TailwindCSS
+                </h1>
+              </div>
+            </div>
           </TabsContent>
 
-          <TabsContent value="workTab" className="pb-2">
+          <TabsContent value="workTab" className="pt-2">
             <Card>
-              <CardHeader className="mt-0">
+              <CardHeader>
                 <CardContent>
                   <div className="text-center">
                     <a
@@ -112,6 +136,28 @@ export default function TabsDemo() {
                 </CardContent>
               </CardHeader>
             </Card>
+            <div className="fixed inset-x-0 flex flex-col items-center gap-2 bottom-5">
+              <div className="flex justify-center gap-2 pt-2">
+                <Button size="icon" onClick={toggleTheme}>
+                  {theme === 'light' ? (
+                    <Moon className="h-[1.2rem] w-[1.2rem]" />
+                  ) : (
+                    <Sun className="h-[1.2rem] w-[1.2rem]" />
+                  )}
+                </Button>
+                <a href="https://github.com/vtonu">
+                  <Button size="icon">
+                    <GitHubLogoIcon />
+                  </Button>
+                </a>
+              </div>
+              <Separator />
+              <div>
+                <h1 className="pb-2 text-xs font-medium leading-none ">
+                  Powered by Vercel, React, NextJS, Radix UI & TailwindCSS
+                </h1>
+              </div>
+            </div>
           </TabsContent>
         </Tabs>
       </main>
