@@ -2,7 +2,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import * as React from 'react';
-import { Moon, Sun } from 'lucide-react';
+import { Car, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { Button } from '@/components/ui/button';
 import dynamic from 'next/dynamic';
@@ -11,7 +11,10 @@ import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
+import { CarouselOrientation } from './carouselCard';
+import { AlertDemo } from './alertCard';
 
+// Dynamic import of the ThemeProvider component from next-themes
 const NoSSRThemeProvider = dynamic(() => import('next-themes').then((mod) => mod.ThemeProvider), {
   ssr: false,
 });
@@ -20,7 +23,7 @@ export default function TabsDemo() {
   const { theme, setTheme } = useTheme();
 
   React.useEffect(() => {
-    setTheme('dark');
+    setTheme('light'); // Set the theme to 'light' on initial render
   }, [setTheme]); // Add 'setTheme' to the dependency array
 
   const toggleTheme = () => {
@@ -36,7 +39,6 @@ export default function TabsDemo() {
       <main className="flex justify-center min-h-screen">
         <Tabs defaultValue="homeTab" className="w-[490px] p-5">
           <TabsList className="w-full">
-            {/* <Separator /> */}
             <TabsTrigger value="homeTab" className="rounded-lg">
               HOME
             </TabsTrigger>
@@ -49,16 +51,17 @@ export default function TabsDemo() {
                 <a href="https://victortonu.myportfolio.com/home">Adobe Portfolio</a>
               </Badge>
             </TabsTrigger>
-            {/* <Separator /> */}
           </TabsList>
 
           <TabsContent value="homeTab" className="pt-2">
+            <AlertDemo />
             <Separator />
             <div>
               <h1 className="relative z-10 pt-20 pb-20 font-sans text-lg font-bold text-center text-transparent md:text-7xl bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-600">
                 Welcome!
               </h1>
             </div>
+
             <AspectRatio ratio={16 / 9} className=" bg-muted">
               <Image src="/3d.jpg" alt="Photo by Philip Oroni" fill className="pb-2 rounded-md" />
             </AspectRatio>
@@ -119,23 +122,27 @@ export default function TabsDemo() {
             </div>
           </TabsContent>
 
-          <TabsContent value="workTab" className="pt-2">
+          <TabsContent value="workTab" className="pt-2 ">
             <Card>
               <CardHeader>
-                <CardContent>
-                  <div className="text-center">
-                    <a
-                      href="https://github.com/vtonu/GraphicDesign_Portfolio"
-                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      <h2 className={`text-xl font-semibold my-8`}>Project 1</h2>
-                      <p className={` max-w-[50ch] text-sm opacity-50`}>Mantine UI Portfolio</p>
-                    </a>
-                  </div>
-                </CardContent>
+                <div className="text-center">
+                  <a
+                    href="https://shad-cn-ui.vercel.app/"
+                    className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    <h2 className={`text-xl font-semibold my-2`}>Web Design</h2>
+                    <p className={` max-w-[50ch] text-sm opacity-60`}>
+                      Personal portfolio project using React, NextJS, Radix UI, TailwindCSS &
+                      shadcn/ui (v1.7)
+                    </p>
+                  </a>
+                </div>
               </CardHeader>
             </Card>
+            <div className="flex flex-col items-center pt-14">
+              <CarouselOrientation />
+            </div>
             <div className="fixed inset-x-0 flex flex-col items-center gap-2 bottom-5">
               <div className="flex justify-center gap-2 pt-2">
                 <Button size="icon" onClick={toggleTheme}>
