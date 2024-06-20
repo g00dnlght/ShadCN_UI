@@ -7,7 +7,7 @@ export function AlertDemo() {
     <Alert variant="destructive" className="flex">
       <Terminal className="w-4 h-4" />
       <AlertTitle>Heads up!</AlertTitle>
-      <AlertDescription>This website is a work-in-progress!</AlertDescription>
+      <AlertDescription>This website is a work-in-progress.</AlertDescription>
     </Alert>
   );
 }

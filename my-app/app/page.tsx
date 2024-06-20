@@ -47,39 +47,38 @@ export default function TabsDemo() {
             </TabsTrigger>
             <TabsTrigger value="workTab" className="rounded-lg">
               WORK
-              <Badge variant="outline" className="ml-2 bg-red-500">
+              {/* <Badge variant="outline" className="ml-2 bg-red-500">
                 <a href="https://victortonu.myportfolio.com/home">Adobe Portfolio</a>
-              </Badge>
+              </Badge> */}
             </TabsTrigger>
+            <Button size="sm" onClick={toggleTheme} className="ml-2 mr-2">
+              {theme === 'light' ? (
+                <Moon className="h-[1rem] w-[1rem]" />
+              ) : (
+                <Sun className="h-[1rem] w-[1rem]" />
+              )}
+            </Button>
+            <a href="https://github.com/vtonu">
+              <Button size="sm">
+                <GitHubLogoIcon />
+              </Button>
+            </a>
           </TabsList>
 
           <TabsContent value="homeTab" className="pt-2">
             <AlertDemo />
-            <Separator />
-            <div>
-              <h1 className="relative z-10 pt-20 pb-20 font-sans text-lg font-bold text-center text-transparent md:text-7xl bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-600">
-                Welcome!
-              </h1>
+            <h1 className="relative z-10 pt-20 pb-10 font-sans text-lg font-bold text-center text-transparent md:text-7xl sm:text-lg bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-600">
+              Welcome!
+            </h1>
+            <div className="pt-2">
+              <AspectRatio ratio={16 / 9}>
+                <Image src="/3d.jpg" alt="Photo by Philip Oroni" fill className="rounded-md" />
+              </AspectRatio>
             </div>
-
-            <AspectRatio ratio={16 / 9} className=" bg-muted">
-              <Image src="/3d.jpg" alt="Photo by Philip Oroni" fill className="pb-2 rounded-md" />
-            </AspectRatio>
+            {/* <div className="pt-2">
+              <Separator />
+            </div> */}
             <div className="fixed inset-x-0 flex flex-col items-center gap-2 bottom-5">
-              <div className="flex justify-center gap-2 pt-2">
-                <Button size="icon" onClick={toggleTheme}>
-                  {theme === 'light' ? (
-                    <Moon className="h-[1.2rem] w-[1.2rem]" />
-                  ) : (
-                    <Sun className="h-[1.2rem] w-[1.2rem]" />
-                  )}
-                </Button>
-                <a href="https://github.com/vtonu">
-                  <Button size="icon">
-                    <GitHubLogoIcon />
-                  </Button>
-                </a>
-              </div>
               <Separator />
               <div>
                 <h1 className="pb-2 text-xs font-medium leading-none ">
@@ -99,20 +98,6 @@ export default function TabsDemo() {
               </CardHeader>
             </Card>
             <div className="fixed inset-x-0 flex flex-col items-center gap-2 bottom-5">
-              <div className="flex justify-center gap-2 pt-2">
-                <Button size="icon" onClick={toggleTheme}>
-                  {theme === 'light' ? (
-                    <Moon className="h-[1.2rem] w-[1.2rem]" />
-                  ) : (
-                    <Sun className="h-[1.2rem] w-[1.2rem]" />
-                  )}
-                </Button>
-                <a href="https://github.com/vtonu">
-                  <Button size="icon">
-                    <GitHubLogoIcon />
-                  </Button>
-                </a>
-              </div>
               <Separator />
               <div>
                 <h1 className="pb-2 text-xs font-medium leading-none ">
@@ -121,43 +106,145 @@ export default function TabsDemo() {
               </div>
             </div>
           </TabsContent>
-
           <TabsContent value="workTab" className="pt-2 ">
-            <Card>
-              <CardHeader>
-                <div className="text-center">
-                  <a
-                    href="https://shad-cn-ui.vercel.app/"
-                    className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
-                    target="_blank"
-                    rel="noopener noreferrer">
-                    <h2 className={`text-xl font-semibold my-2`}>Web Design</h2>
-                    <p className={` max-w-[50ch] text-sm opacity-60`}>
-                      Personal portfolio project using React, NextJS, Radix UI, TailwindCSS &
-                      shadcn/ui (v1.7)
-                    </p>
-                  </a>
+            <Tabs defaultValue="webDesignTab">
+              <TabsList className="w-full">
+                <TabsTrigger value="webDesignTab" className="rounded-lg">
+                  WEB DESIGN
+                </TabsTrigger>
+                <TabsTrigger value="uiuxTab" className="rounded-lg">
+                  UI/UX
+                </TabsTrigger>
+                <TabsTrigger value="3dworkTab" className="rounded-lg">
+                  3D WORK
+                </TabsTrigger>
+              </TabsList>
+              <TabsContent value="webDesignTab">
+                <CardHeader>
+                  <div className="text-center">
+                    <a
+                      href="https://shad-cn-ui.vercel.app/"
+                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      {/* <h2 className={`text-xl font-semibold my-2`}>React</h2> */}
+
+                      <p className={` max-w-[100ch] text-sm opacity-60 pb-2`}>
+                        Personal portfolio project using React, NextJS, Radix UI, TailwindCSS &
+                        shadcn/ui (v1.7)
+                      </p>
+                      <AspectRatio ratio={16 / 9}>
+                        <Image
+                          src="/3d.jpg"
+                          alt="Photo by Victor Tonu"
+                          fill
+                          className="rounded-md"
+                        />
+                      </AspectRatio>
+                    </a>
+                    <div className="pt-2">
+                      <Badge variant="outline" className="ml-2 bg-green-500">
+                        <a href="https://shad-cn-ui.vercel.app/">More Info</a>
+                      </Badge>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardHeader>
+                  <div className="text-center">
+                    <a
+                      href="https://github.com/vtonu/GraphicDesign_Portfolio"
+                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      {/* <h2 className={`text-xl font-semibold my-2`}>Mantine UI</h2> */}
+
+                      <p className={` max-w-[100ch] text-sm opacity-60`}>
+                        Minimal Mantine UI Project using React, NextJS and Tabler Icons (v0.5)
+                      </p>
+                      <AspectRatio ratio={16 / 8}>
+                        <Image
+                          src="/mantine.png"
+                          alt="Photo by Victor Tonu"
+                          fill
+                          className="rounded-md"
+                        />
+                      </AspectRatio>
+                    </a>
+                    <div className="pt-2">
+                      <Badge variant="outline" className="ml-2 bg-green-500">
+                        <a href="https://github.com/vtonu/GraphicDesign_Portfolio">More Info</a>
+                      </Badge>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardHeader>
+                  <div className="text-center">
+                    <a
+                      href="https://game138-aceternity-ui.vercel.app/"
+                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      {/* <h2 className={`text-xl font-semibold my-2`}>Aceternity UI</h2> */}
+
+                      <p className={` max-w-[100ch] text-sm opacity-60 pb-2`}>
+                        NextJS Project using React, TailwindCSS, Framer Motion - GAME138 Final
+                        (v0.9)
+                      </p>
+                      <AspectRatio ratio={16 / 12}>
+                        <Image
+                          src="/aceternity.jpg"
+                          alt="Photo by Victor Tonu"
+                          fill
+                          className="rounded-md"
+                        />
+                      </AspectRatio>
+                    </a>
+                    <div className="pt-2">
+                      <Badge variant="outline" className="ml-2 bg-green-500">
+                        <a href="https://game138-aceternity-ui.vercel.app/">More Info</a>
+                      </Badge>
+                    </div>
+                  </div>
+                </CardHeader>
+              </TabsContent>
+              <TabsContent value="uiuxTab">
+                <CardHeader>
+                  <div className="text-center">
+                    <a
+                      href="https://jarednovy.itch.io/mystery-meat"
+                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      <h2 className={`text-xl font-semibold my-2`}>Mystery Meat</h2>
+                      <p className={` max-w-[100ch] text-sm opacity-60 pb-2`}>
+                        A horror-style game prototype in Unity for my last class project at LWTech.
+                        I handled the UI/UX design, focusing on the overall aesthetic.
+                      </p>
+                      <AspectRatio ratio={16 / 12}>
+                        <Image
+                          src="/uiux.jpg"
+                          alt="Photo by Victor Tonu UI UX"
+                          fill
+                          className="rounded-md"
+                        />
+                      </AspectRatio>
+                    </a>
+                    <div className="pt-2">
+                      <Badge variant="outline" className="ml-2 bg-red-500">
+                        <a href="https://jarednovy.itch.io/mystery-meat">More Info</a>
+                      </Badge>
+                    </div>
+                  </div>
+                </CardHeader>
+              </TabsContent>
+              <TabsContent value="3dworkTab" className="pt-8">
+                <div className="flex flex-col items-center pt-8">
+                  <CarouselOrientation />
                 </div>
-              </CardHeader>
-            </Card>
-            <div className="flex flex-col items-center pt-14">
-              <CarouselOrientation />
-            </div>
+              </TabsContent>
+            </Tabs>
+
             <div className="fixed inset-x-0 flex flex-col items-center gap-2 bottom-5">
-              <div className="flex justify-center gap-2 pt-2">
-                <Button size="icon" onClick={toggleTheme}>
-                  {theme === 'light' ? (
-                    <Moon className="h-[1.2rem] w-[1.2rem]" />
-                  ) : (
-                    <Sun className="h-[1.2rem] w-[1.2rem]" />
-                  )}
-                </Button>
-                <a href="https://github.com/vtonu">
-                  <Button size="icon">
-                    <GitHubLogoIcon />
-                  </Button>
-                </a>
-              </div>
               <Separator />
               <div>
                 <h1 className="pb-2 text-xs font-medium leading-none ">
