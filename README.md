@@ -1,1 +1,1 @@
-![image](https://github.com/vtonu/ShadCN_UI/assets/56773210/0e77dec7-7a01-4cff-9406-aa63dd39e0c0)
+![image](https://github.com/vtonu/ShadCN_UI/assets/56773210/854abff6-bba0-43d7-8e0e-a2e0166baac3)

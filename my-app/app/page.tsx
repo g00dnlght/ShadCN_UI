@@ -75,13 +75,12 @@ export default function TabsDemo() {
                 <Image src="/3d.jpg" alt="Photo by Philip Oroni" fill className="rounded-md" />
               </AspectRatio>
             </div>
-            {/* <div className="pt-2">
-              <Separator />
-            </div> */}
-            <div className="fixed inset-x-0 flex flex-col items-center gap-2 bottom-5">
+
+            {/* Home Footer */}
+            <div className="fixed inset-x-0 flex flex-col items-center bottom-5">
               <Separator />
               <div>
-                <h1 className="pb-2 text-xs font-medium leading-none ">
+                <h1 className="p-4 text-xs font-medium">
                   Powered by Vercel, React, NextJS, Radix UI & TailwindCSS
                 </h1>
               </div>
@@ -97,10 +96,12 @@ export default function TabsDemo() {
                 </CardDescription>
               </CardHeader>
             </Card>
-            <div className="fixed inset-x-0 flex flex-col items-center gap-2 bottom-5">
+
+            {/* About Footer */}
+            <div className="fixed inset-x-0 flex flex-col items-center bottom-5">
               <Separator />
               <div>
-                <h1 className="pb-2 text-xs font-medium leading-none ">
+                <h1 className="p-4 text-xs font-medium">
                   Powered by Vercel, React, NextJS, Radix UI & TailwindCSS
                 </h1>
               </div>
@@ -123,15 +124,15 @@ export default function TabsDemo() {
                 <CardHeader>
                   <div className="text-center">
                     <a
-                      href="https://shad-cn-ui.vercel.app/"
+                      href="https://github.com/vtonu/ShadCN_UI"
                       className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
                       target="_blank"
                       rel="noopener noreferrer">
                       {/* <h2 className={`text-xl font-semibold my-2`}>React</h2> */}
 
                       <p className={` max-w-[100ch] text-sm opacity-60 pb-2`}>
-                        Personal portfolio project using React, NextJS, Radix UI, TailwindCSS &
-                        shadcn/ui (v1.7)
+                        Personal portfolio project using React, shadcn/ui, NextJS, Radix UI &
+                        TailwindCSS (v1.9)
                       </p>
                       <AspectRatio ratio={16 / 9}>
                         <Image
@@ -142,11 +143,11 @@ export default function TabsDemo() {
                         />
                       </AspectRatio>
                     </a>
-                    <div className="pt-2">
+                    {/* <div className="pt-0">
                       <Badge variant="outline" className="ml-2 bg-green-500">
                         <a href="https://shad-cn-ui.vercel.app/">More Info</a>
                       </Badge>
-                    </div>
+                    </div> */}
                   </div>
                 </CardHeader>
                 <CardHeader>
@@ -159,19 +160,11 @@ export default function TabsDemo() {
                       {/* <h2 className={`text-xl font-semibold my-2`}>Mantine UI</h2> */}
 
                       <p className={` max-w-[100ch] text-sm opacity-60`}>
-                        Minimal Mantine UI Project using React, NextJS and Tabler Icons (v0.5)
+                        🔵 Minimal Mantine Project using React, NextJS, Tabler Icons v0.5
                       </p>
-                      <AspectRatio ratio={16 / 8}>
-                        <Image
-                          src="/mantine.png"
-                          alt="Photo by Victor Tonu"
-                          fill
-                          className="rounded-md"
-                        />
-                      </AspectRatio>
                     </a>
-                    <div className="pt-2">
-                      <Badge variant="outline" className="ml-2 bg-green-500">
+                    <div className="pt-0">
+                      <Badge variant="outline" className="ml-2 bg-sky-400">
                         <a href="https://github.com/vtonu/GraphicDesign_Portfolio">More Info</a>
                       </Badge>
                     </div>
@@ -187,20 +180,12 @@ export default function TabsDemo() {
                       {/* <h2 className={`text-xl font-semibold my-2`}>Aceternity UI</h2> */}
 
                       <p className={` max-w-[100ch] text-sm opacity-60 pb-2`}>
-                        NextJS Project using React, TailwindCSS, Framer Motion - GAME138 Final
-                        (v0.9)
+                        🚀 NextJS Project using React, TailwindCSS, Framer Motion - GAME138 Final
+                        (v1.0)
                       </p>
-                      <AspectRatio ratio={16 / 12}>
-                        <Image
-                          src="/aceternity.jpg"
-                          alt="Photo by Victor Tonu"
-                          fill
-                          className="rounded-md"
-                        />
-                      </AspectRatio>
                     </a>
-                    <div className="pt-2">
-                      <Badge variant="outline" className="ml-2 bg-green-500">
+                    <div className="pt-0">
+                      <Badge variant="outline" className="ml-2 bg-green-400">
                         <a href="https://game138-aceternity-ui.vercel.app/">More Info</a>
                       </Badge>
                     </div>
@@ -217,8 +202,8 @@ export default function TabsDemo() {
                       rel="noopener noreferrer">
                       <h2 className={`text-xl font-semibold my-2`}>Mystery Meat</h2>
                       <p className={` max-w-[100ch] text-sm opacity-60 pb-2`}>
-                        A horror-style game prototype in Unity for my last class project at LWTech.
-                        I handled the UI/UX design, focusing on the overall aesthetic.
+                        A horror game prototype in Unity, from my last game class at LWTech. I
+                        handled the UI/UX design, focusing on the overall aesthetic.
                       </p>
                       <AspectRatio ratio={16 / 12}>
                         <Image
@@ -229,25 +214,34 @@ export default function TabsDemo() {
                         />
                       </AspectRatio>
                     </a>
-                    <div className="pt-2">
+                    {/* <div className="pt-0">
                       <Badge variant="outline" className="ml-2 bg-red-500">
                         <a href="https://jarednovy.itch.io/mystery-meat">More Info</a>
                       </Badge>
-                    </div>
+                    </div> */}
                   </div>
                 </CardHeader>
               </TabsContent>
-              <TabsContent value="3dworkTab" className="pt-8">
+              <TabsContent value="3dworkTab" className="pt-0">
+                <CardHeader>
+                  <div className="block p-2 mx-2 text-center border rounded-lg opacity-75">
+                    <p className={` max-w-[100ch] text-sm opacity-60 `}>
+                      A combination of 3D stuff from other classes I took at LWTech, such as Intro
+                      to Maya, 3D Environment or ZBrush.
+                    </p>
+                  </div>
+                </CardHeader>
                 <div className="flex flex-col items-center pt-8">
                   <CarouselOrientation />
                 </div>
               </TabsContent>
             </Tabs>
 
-            <div className="fixed inset-x-0 flex flex-col items-center gap-2 bottom-5">
+            {/* Work Tab Footer */}
+            <div className="fixed inset-x-0 flex flex-col items-center bottom-5">
               <Separator />
               <div>
-                <h1 className="pb-2 text-xs font-medium leading-none ">
+                <h1 className="p-4 text-xs font-medium">
                   Powered by Vercel, React, NextJS, Radix UI & TailwindCSS
                 </h1>
               </div>

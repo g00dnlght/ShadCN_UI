@@ -11,15 +11,15 @@ import {
 
 export function CarouselOrientation() {
   const images = [
-    '/public/3dwork1.jpg',
-    '/public/3dwork2.jpg',
-    '/public/3dwork3.jpg',
-    '/public/3dwork4.jpg',
-    '/public/3dwork5.jpg',
+    './3dwork1.jpg',
+    './3dwork2.jpg',
+    './3dwork3.jpg',
+    './3dwork4.jpg',
+    './3dwork5.jpg',
   ];
 
   return (
-    <Carousel className="w-full max-w-xs">
+    <Carousel className="w-full max-w-md">
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index}>
