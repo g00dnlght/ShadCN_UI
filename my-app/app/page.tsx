@@ -37,8 +37,8 @@ export default function TabsDemo() {
   return (
     <NoSSRThemeProvider>
       <main className="flex justify-center min-h-screen">
-        <Tabs defaultValue="homeTab" className="w-[490px] p-5">
-          <TabsList className="w-full">
+        <Tabs defaultValue="homeTab" className="w-[490px] pt-8">
+          <TabsList className="w-full p-8">
             <TabsTrigger value="homeTab" className="rounded-lg">
               HOME
             </TabsTrigger>
@@ -67,18 +67,23 @@ export default function TabsDemo() {
 
           <TabsContent value="homeTab" className="pt-2">
             <AlertDemo />
-            <h1 className="relative z-10 pt-20 pb-10 font-sans text-lg font-bold text-center text-transparent md:text-7xl sm:text-lg bg-clip-text bg-gradient-to-b from-neutral-200 to-neutral-600">
+            <h1 className="relative z-10 pt-20 pb-10 font-sans text-lg font-bold text-center text-transparent md:text-7xl sm:text-lg bg-clip-text bg-gradient-to-b from-purple-100 to-neutral-700">
               Welcome!
             </h1>
             <div className="pt-2">
-              <AspectRatio ratio={16 / 9}>
-                <Image src="/3d.jpg" alt="Photo by Philip Oroni" fill className="rounded-md" />
+              <AspectRatio ratio={4 / 3}>
+                <Image
+                  src="/purpleBackground.jpg"
+                  alt="Typography Rhythms"
+                  fill
+                  className="rounded-md"
+                />
               </AspectRatio>
             </div>
 
             {/* Home Footer */}
             <div className="fixed inset-x-0 flex flex-col items-center bottom-5">
-              <Separator />
+              {/* <Separator /> */}
               <div>
                 <h1 className="p-4 text-xs font-medium">
                   Powered by Vercel, React, NextJS, Radix UI & TailwindCSS
@@ -96,10 +101,19 @@ export default function TabsDemo() {
                 </CardDescription>
               </CardHeader>
             </Card>
+            <div className="pt-2">
+              <AspectRatio ratio={16 / 7}>
+                <Image
+                  src="/pinkBackground.jpg"
+                  alt="Typography Rhythms"
+                  fill
+                  className="rounded-md"
+                />
+              </AspectRatio>
+            </div>
 
             {/* About Footer */}
             <div className="fixed inset-x-0 flex flex-col items-center bottom-5">
-              <Separator />
               <div>
                 <h1 className="p-4 text-xs font-medium">
                   Powered by Vercel, React, NextJS, Radix UI & TailwindCSS
@@ -108,6 +122,16 @@ export default function TabsDemo() {
             </div>
           </TabsContent>
           <TabsContent value="workTab" className="pt-2 ">
+            <div className="pb-4">
+              <AspectRatio ratio={16 / 5}>
+                <Image
+                  src="/greenBackground.jpg"
+                  alt="Typography Rhythms"
+                  fill
+                  className="rounded-md"
+                />
+              </AspectRatio>
+            </div>
             <Tabs defaultValue="webDesignTab">
               <TabsList className="w-full">
                 <TabsTrigger value="webDesignTab" className="rounded-lg">
@@ -131,23 +155,28 @@ export default function TabsDemo() {
                       {/* <h2 className={`text-xl font-semibold my-2`}>React</h2> */}
 
                       <p className={` max-w-[100ch] text-sm opacity-60 pb-2`}>
-                        Personal portfolio project using React, shadcn/ui, NextJS, Radix UI &
-                        TailwindCSS (v1.9)
+                        Personal portfolio website using React, shadcn/ui, NextJS, Radix UI &
+                        TailwindCSS (v2.1)
                       </p>
-                      <AspectRatio ratio={16 / 9}>
+                      {/* <AspectRatio ratio={16 / 9}>
                         <Image
                           src="/3d.jpg"
                           alt="Photo by Victor Tonu"
                           fill
                           className="rounded-md"
                         />
-                      </AspectRatio>
+                      </AspectRatio> */}
                     </a>
                     {/* <div className="pt-0">
                       <Badge variant="outline" className="ml-2 bg-green-500">
                         <a href="https://shad-cn-ui.vercel.app/">More Info</a>
                       </Badge>
                     </div> */}
+                    <div className="pt-0">
+                      <Badge variant="outline" className="ml-2 bg-slate-400">
+                        <a href="https://github.com/vtonu/ShadCN_UI">More Info</a>
+                      </Badge>
+                    </div>
                   </div>
                 </CardHeader>
                 <CardHeader>
@@ -231,7 +260,7 @@ export default function TabsDemo() {
                     </p>
                   </div>
                 </CardHeader>
-                <div className="flex flex-col items-center pt-8">
+                <div className="flex flex-col items-center">
                   <CarouselOrientation />
                 </div>
               </TabsContent>
@@ -239,7 +268,6 @@ export default function TabsDemo() {
 
             {/* Work Tab Footer */}
             <div className="fixed inset-x-0 flex flex-col items-center bottom-5">
-              <Separator />
               <div>
                 <h1 className="p-4 text-xs font-medium">
                   Powered by Vercel, React, NextJS, Radix UI & TailwindCSS

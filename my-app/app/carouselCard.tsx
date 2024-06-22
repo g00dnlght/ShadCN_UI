@@ -16,6 +16,10 @@ export function CarouselOrientation() {
     './3dwork3.jpg',
     './3dwork4.jpg',
     './3dwork5.jpg',
+    './ZBrushFinal.jpg',
+    './ZBrushFinalBust.jpg',
+    './ZBrushFinalBustGray1.jpg',
+    './ZBrushFinalBustGray2.jpg',
   ];
 
   return (
