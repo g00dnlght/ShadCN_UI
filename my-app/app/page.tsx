@@ -71,9 +71,9 @@ export default function TabsDemo() {
               Welcome!
             </h1>
             <p className="flex items-center justify-center text-sm text-center">
-              On this website you'll find a collection of my work, ranging from Graphic Design to
-              UI/UX and 3D projects. Feel free to explore and reach out if you have any questions or
-              inquiries. Don't forget to check out my GitHub for more projects.
+              On this website you&apos;ll find a collection of my work, ranging from Graphic Design
+              to UI/UX and 3D projects. Feel free to explore and reach out if you have any questions
+              or inquiries. Don&apos;t forget to check out my GitHub for more projects.
             </p>
             <div className="px-2 pt-2 text-center">
               <AspectRatio ratio={4 / 3}>
@@ -100,7 +100,7 @@ export default function TabsDemo() {
                   Hey, I&apos;m Victor, a creative individual constantly exploring new horizons.
                   Graphic Design is my forte, complemented by a bit of UI/UX. My fascination with AI
                   technology, computers, music &amp; gaming fuels my enthusiasm for innovative work.
-                  Don't forget to check out my GitHub for more projects.
+                  Don&apos;t forget to check out my GitHub for more projects.
                 </CardDescription>
               </CardHeader>
             </Card>

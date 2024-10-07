@@ -1,5 +1,4 @@
 import * as React from 'react';
-
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Carousel,
@@ -8,18 +7,19 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import Image from 'next/image';
 
 export function CarouselOrientation() {
   const images = [
-    './3dwork1.jpg',
-    './3dwork2.jpg',
-    './3dwork3.jpg',
-    './3dwork4.jpg',
-    './3dwork5.jpg',
-    './ZBrushFinal.jpg',
-    './ZBrushFinalBust.jpg',
-    './ZBrushFinalBustGray1.jpg',
-    './ZBrushFinalBustGray2.jpg',
+    '/3dwork1.jpg',
+    '/3dwork2.jpg',
+    '/3dwork3.jpg',
+    '/3dwork4.jpg',
+    '/3dwork5.jpg',
+    '/ZBrushFinal.jpg',
+    '/ZBrushFinalBust.jpg',
+    '/ZBrushFinalBustGray1.jpg',
+    '/ZBrushFinalBustGray2.jpg',
   ];
 
   return (
@@ -30,8 +30,10 @@ export function CarouselOrientation() {
             <div className="p-1">
               <Card>
                 <CardContent className="flex items-center justify-center p-6 aspect-square">
-                  <img
+                  <Image
                     src={image}
+                    width={500}
+                    height={500}
                     alt={`3D Work ${index + 1}`}
                     className="object-cover w-full h-full"
                   />
