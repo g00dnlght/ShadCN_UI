@@ -67,25 +67,27 @@ export default function TabsDemo() {
 
           <TabsContent value="homeTab" className="pt-2">
             <AlertDemo />
-            <h1 className="relative z-10 pt-20 pb-10 font-sans text-lg font-bold text-center text-transparent md:text-7xl sm:text-lg bg-clip-text bg-gradient-to-b from-purple-100 to-neutral-700">
+            <h1 className="relative z-10 pt-20 pb-8 font-sans font-bold text-center text-transparent text-7xl bg-clip-text bg-gradient-to-b from-purple-100 to-neutral-700">
               Welcome!
             </h1>
-            <div className="pt-2">
+            <p className="flex items-center justify-center text-sm text-center">
+              On this website you'll find a collection of my work, ranging from Graphic Design to
+              UI/UX and 3D projects. Feel free to explore and reach out if you have any questions or
+              inquiries. Don't forget to check out my GitHub for more projects.
+            </p>
+            <div className="px-2 pt-2 text-center">
               <AspectRatio ratio={4 / 3}>
-                <Image
-                  src="/purpleBackground.jpg"
-                  alt="Typography Rhythms"
-                  fill
-                  className="rounded-md"
-                />
+                <Image src="/purpleBackground.jpg" alt="Home Banner" fill className="rounded-lg" />
               </AspectRatio>
+              <br></br>
+              <br></br>
+              Thanks for stopping by!
             </div>
 
-            {/* Home Footer */}
-            <div className="fixed inset-x-0 flex flex-col items-center bottom-5">
-              {/* <Separator /> */}
-              <div>
-                <h1 className="p-4 text-xs font-medium">
+            {/* Home Tab Footer */}
+            <div className="fixed inset-x-0 bottom-0 flex flex-col items-center">
+              <div className="bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] h-[50px]">
+                <h1 className="p-2 text-xs font-medium">
                   Powered by Vercel, React, NextJS, Radix UI & TailwindCSS
                 </h1>
               </div>
@@ -95,27 +97,26 @@ export default function TabsDemo() {
             <Card className="pt-2">
               <CardHeader>
                 <CardDescription className="flex items-center justify-center text-center">
-                  I&apos;m Victor, a creative individual constantly exploring new horizons. Graphic
-                  Design is my forte, complemented by a bit of UI/UX. My fascination with AI
+                  Hey, I&apos;m Victor, a creative individual constantly exploring new horizons.
+                  Graphic Design is my forte, complemented by a bit of UI/UX. My fascination with AI
                   technology, computers, music &amp; gaming fuels my enthusiasm for innovative work.
+                  Don't forget to check out my GitHub for more projects.
                 </CardDescription>
               </CardHeader>
             </Card>
-            <div className="pt-2">
-              <AspectRatio ratio={16 / 7}>
-                <Image
-                  src="/pinkBackground.jpg"
-                  alt="Typography Rhythms"
-                  fill
-                  className="rounded-md"
-                />
+            <div className="px-2 pt-2 text-center">
+              <AspectRatio ratio={4 / 3}>
+                <Image src="/purpleBackground.jpg" alt="Home Banner" fill className="rounded-lg" />
               </AspectRatio>
+              <br></br>
+              <br></br>
+              Thanks for stopping by!
             </div>
 
-            {/* About Footer */}
-            <div className="fixed inset-x-0 flex flex-col items-center bottom-5">
-              <div>
-                <h1 className="p-4 text-xs font-medium">
+            {/* About Tab Footer */}
+            <div className="fixed inset-x-0 bottom-0 flex flex-col items-center">
+              <div className="bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] h-[50px]">
+                <h1 className="p-2 text-xs font-medium">
                   Powered by Vercel, React, NextJS, Radix UI & TailwindCSS
                 </h1>
               </div>
@@ -123,7 +124,7 @@ export default function TabsDemo() {
           </TabsContent>
           <TabsContent value="workTab" className="pt-2 ">
             <div className="pb-4">
-              <AspectRatio ratio={16 / 5}>
+              <AspectRatio ratio={16 / 2}>
                 <Image
                   src="/greenBackground.jpg"
                   alt="Typography Rhythms"
@@ -220,6 +221,50 @@ export default function TabsDemo() {
                     </div>
                   </div>
                 </CardHeader>
+                <CardHeader>
+                  <div className="text-center">
+                    <a
+                      href="https://github.com/vtonu/meter-electric"
+                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      {/* <h2 className={`text-xl font-semibold my-2`}>Aceternity UI</h2> */}
+
+                      <p className={` max-w-[100ch] text-sm opacity-60 pb-2`}>
+                        ⚡ Meter Electric Landing Page - Shadcn, NextJS, TypeScript, TailwindCSS
+                        (v1.3)
+                      </p>
+                    </a>
+                    <div className="pt-0">
+                      <Badge variant="outline" className="ml-2 bg-blue-400">
+                        <a href="https://github.com/vtonu/meter-electric">More Info</a>
+                      </Badge>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardHeader>
+                  <div className="pb-10 text-center">
+                    {' '}
+                    {/* pb-10 basically gap for the last element of this tab so the footer can breathe (causes browser scroll, just a bit) */}
+                    <a
+                      href="https://meterelectric-new.vercel.app/"
+                      className="block p-2 mx-4 mb-2 transition-colors border rounded-lg opacity-75 pb group hover:bg-zinc-100/5 hover:ring-zinc-600"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      {/* <h2 className={`text-xl font-semibold my-2`}>Aceternity UI</h2> */}
+
+                      <p className={` max-w-[100ch] text-sm opacity-60 pb-2`}>
+                        🌲 Minimal landing page using React, Vite, HMR, TailwindCSS, ESLint template
+                        (ME v1.8)
+                      </p>
+                    </a>
+                    <div className="pt-0">
+                      <Badge variant="outline" className="ml-2 bg-blue-400">
+                        <a href="https://meterelectric-new.vercel.app/">More Info</a>
+                      </Badge>
+                    </div>
+                  </div>
+                </CardHeader>
               </TabsContent>
               <TabsContent value="uiuxTab">
                 <CardHeader>
@@ -267,9 +312,9 @@ export default function TabsDemo() {
             </Tabs>
 
             {/* Work Tab Footer */}
-            <div className="fixed inset-x-0 flex flex-col items-center bottom-5">
-              <div>
-                <h1 className="p-4 text-xs font-medium">
+            <div className="fixed inset-x-0 bottom-0 flex flex-col items-center">
+              <div className="bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)] h-[50px]">
+                <h1 className="p-2 text-xs font-medium">
                   Powered by Vercel, React, NextJS, Radix UI & TailwindCSS
                 </h1>
               </div>
